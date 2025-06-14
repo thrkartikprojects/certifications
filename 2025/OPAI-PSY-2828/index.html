@@ -1,167 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Credential Verification - Foundations of Applied Psychology and Emotional Intelligence</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    .container {
-      max-width: 960px;
-      margin: 2rem auto;
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 2rem;
-      box-shadow: 0 0 15px rgba(0,0,0,0.08);
-    }
-    .header {
-      text-align: center;
-      border-bottom: 1px solid #eaeaea;
-      padding-bottom: 1rem;
-      position: relative;
-    }
-    .header img {
-      height: 40px;
-      position: absolute;
-      right: 1.5rem;
-      top: 1.5rem;
-    }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 0.3rem;
-    }
-    .certificate-info {
-      margin-top: 1.5rem;
-    }
-    .certificate-info h2 {
-      margin-bottom: 0.5rem;
-      font-size: 1.3rem;
-    }
-    .label {
-      font-weight: bold;
-    }
-    .stamp {
-      margin-top: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .stamp img {
-      height: 60px;
-      margin-bottom: 1rem;
-    }
-    .dropdown {
-      margin-top: 2rem;
-      background: #f9f9f9;
-      border-radius: 6px;
-      padding: 1rem;
-    }
-    summary {
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .verified {
-      color: green;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-    .disclaimer, .dropdown p {
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.6;
-      text-align: justify;
-    }
-    .footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-    .logos {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .logos img {
-      height: 40px;
-      margin: 0 15px;
-      opacity: 0.95;
-      vertical-align: middle;
-    }
-    @media (max-width: 600px) {
-      .container {
-        margin: 1rem;
-        padding: 1rem;
-      }
-      .stamp {
-        align-items: center;
-        text-align: center;
-      }
-      .header img {
-        position: static;
-        display: block;
-        margin: 0 auto 1rem;
-      }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Secure Credential Verification</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+<style>
+html, body {
+margin: 0;
+padding: 0;
+font-family: 'Roboto', sans-serif;
+background-color: #f4f4f4;
+color: #333;
+user-select: none;
+}
+body::before {
+content: "";
+display: block;
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(255,255,255,0);
+z-index: 999;
+pointer-events: none;
+}
+.container {
+max-width: 960px;
+margin: 2rem auto;
+background: #fff;
+border: 1px solid #ccc;
+border-radius: 8px;
+padding: 2rem;
+box-shadow: 0 0 15px rgba(0,0,0,0.08);
+}
+.header {
+text-align: center;
+border-bottom: 1px solid #eaeaea;
+padding-bottom: 1rem;
+position: relative;
+}
+.header img {
+height: 40px;
+position: absolute;
+right: 1.5rem;
+top: 1.5rem;
+}
+h1 {
+font-family: 'Playfair Display', serif;
+font-size: 2rem;
+margin-bottom: 0.3rem;
+}
+.certificate-info {
+margin-top: 1.5rem;
+}
+.certificate-info h2 {
+margin-bottom: 0.5rem;
+font-size: 1.3rem;
+}
+.label {
+font-weight: bold;
+}
+.stamp {
+margin-top: 2rem;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+.stamp img {
+height: 60px;
+margin-bottom: 1rem;
+}
+.dropdown {
+margin-top: 2rem;
+background: #f9f9f9;
+border-radius: 6px;
+padding: 1rem;
+}
+summary {
+font-weight: bold;
+cursor: pointer;
+}
+.verified {
+color: green;
+font-weight: bold;
+font-size: 1.1rem;
+}
+.disclaimer, .dropdown p {
+font-size: 0.95rem;
+color: #555;
+line-height: 1.6;
+text-align: justify;
+}
+.footer {
+margin-top: 3rem;
+text-align: center;
+font-size: 0.9rem;
+color: #aaa;
+}
+.logos {
+text-align: center;
+margin-top: 2rem;
+}
+.logos img {
+height: 40px;
+margin: 0 15px;
+opacity: 0.95;
+vertical-align: middle;
+}
+@media (max-width: 600px) {
+.container {
+margin: 1rem;
+padding: 1rem;
+}
+.stamp {
+align-items: center;
+text-align: center;
+}
+.header img {
+position: static;
+display: block;
+margin: 0 auto 1rem;
+}
+}
+</style>
+<script>
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('keydown', function(e) {
+if ((e.ctrlKey || e.metaKey) && (e.key === 'u' || e.key === 's' || e.key === 'p')) {
+e.preventDefault();
+}
+if (e.key === 'PrintScreen') {
+navigator.clipboard.writeText('Screenshots are disabled on this page.');
+alert("Screenshot disabled.");
+}
+});
+</script>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" alt="OpenAI Logo">
-      <h1>Credential Verification</h1>
-      <p>Foundations of Applied Psychology and Emotional Intelligence</p>
-    </div>
+<div class="container">
+<div class="header">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" alt="OpenAI Logo">
+<h1>Credential Verification</h1>
+<p>Foundations of Applied Psychology and Emotional Intelligence</p>
+</div>
 
-    <div class="certificate-info">
-      <h2>Verified Credential</h2>
-      <p><span class="label">Name:</span> Kartik Malik</p>
-      <p><span class="label">Credential ID:</span> OPAI-MAZE-KM-13625X</p>
-      <p><span class="label">Completion Date:</span> June 13, 2025</p>
-      <p><span class="label">Final Score:</span> 94.3%</p>
-      <p><span class="label">Verification Status:</span> <span class="verified">✅ Verified</span></p>
-      <p><span class="label">Issued by:</span> OpenAI Learning Series · Simulated Expert Mentor</p>
-    </div>
+<div class="certificate-info">
+<h2>Verified Credential</h2>
+<p><span class="label">Name:</span> Kartik Malik</p>
+<p><span class="label">Credential ID:</span> OPAI-MAZE-KM-13625X</p>
+<p><span class="label">Completion Date:</span> June 13, 2025</p>
+<p><span class="label">Final Score:</span> 94.3%</p>
+<p><span class="label">Verification Status:</span> <span class="verified">✅ Verified</span></p>
+<p><span class="label">Issued by:</span> OpenAI Learning Series · Simulated Expert Mentor</p>
+</div>
 
-    <div class="dropdown">
-      <details>
-        <summary>📘 Course Overview & Learning Outcomes</summary>
-        <p><strong>Course Description:</strong> This mastercourse explores key psychological domains including emotional intelligence, identity development, healing strategies, boundary setting, and self-reflection. It blends modern psychological research with cross-cultural insights.</p>
-        <p><strong>Skills Acquired:</strong> Emotional Intelligence, Self-Awareness, Identity Exploration, Emotional Regulation, Resilience, Boundaries Setting, Empathy, Coping Strategies, Psychological Reflection, Cultural Psychology, Mental Health Literacy, Growth Mindset, Applied Psychology.</p>
-        <p><strong>Assessment Methodology:</strong> AI-assisted scenario-based evaluations, reflection-based submissions, and simulation-driven comprehension checkpoints ensure academic integrity and participant understanding throughout the learning journey.</p>
-      </details>
-      <details>
-        <summary>🔐 Verification & Authenticity</summary>
-        <p>This credential is issued based on a rigorous evaluation framework built using OpenAI’s educational technologies. Each participant must pass milestone-based cognitive and emotional assessments, including simulation-driven performance checks. The certificate validates successful mastery of all defined outcomes and is registered with a unique identifier for secure lookup.</p>
-      </details>
-    </div>
+<div class="dropdown">
+<details>
+<summary>📘 Course Overview & Learning Outcomes</summary>
+<p><strong>Course Description:</strong> This mastercourse explores key psychological domains including emotional intelligence, identity development, healing strategies, boundary setting, and self-reflection. It blends modern psychological research with cross-cultural insights.</p>
+<p><strong>Skills Acquired:</strong> Emotional Intelligence, Self-Awareness, Identity Exploration, Emotional Regulation, Resilience, Boundaries Setting, Empathy, Coping Strategies, Psychological Reflection, Cultural Psychology, Mental Health Literacy, Growth Mindset, Applied Psychology.</p>
+<p><strong>Assessment Methodology:</strong> AI-assisted scenario-based evaluations, reflection-based submissions, and simulation-driven comprehension checkpoints ensure academic integrity and participant understanding throughout the learning journey.</p>
+</details>
+<details>
+<summary>🔐 Verification & Authenticity</summary>
+<p>This credential is issued based on a rigorous evaluation framework built using OpenAI’s educational technologies. Each participant must pass milestone-based cognitive and emotional assessments, including simulation-driven performance checks. The certificate validates successful mastery of all defined outcomes and is registered with a unique identifier for secure lookup.</p>
+</details>
+</div>
 
-    <div class="stamp">
-      <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Verified Stamp">
-      <div>
-        <p><strong>Dr. Maya Anand</strong></p>
-        <p>Lead Mentor, Psychology Mastercourse Simulation Program</p>
-      </div>
-    </div>
+<div class="stamp">
+<img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Verified Stamp">
+<div>
+<p><strong>Dr. Maya Anand</strong></p>
+<p>Lead Mentor, Psychology Mastercourse Simulation Program</p>
+</div>
+</div>
 
-    <div class="logos">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" alt="OpenAI Logo">
-    </div>
+<div class="disclaimer">
+<p><strong>Disclaimer:</strong> This certificate was issued as part of a structured AI-facilitated educational simulation using OpenAI technologies. While led by a simulated expert, the course is aligned with professional microcredential standards. Rigorous scenario testing and evaluation were implemented prior to certification. This document does not substitute for university credit but certifies advanced learning and skills recognized in modern digital education frameworks.</p>
+</div>
 
-    <div class="disclaimer">
-      <p><strong>Disclaimer:</strong> This certificate was issued as part of a structured AI-facilitated educational simulation using OpenAI technologies. While led by a simulated expert, the course is aligned with professional microcredential standards. Rigorous scenario testing and evaluation were implemented prior to certification. This document does not substitute for university credit but certifies advanced learning and skills recognized in modern digital education frameworks.</p>
-    </div>
-
-    <div class="footer">
-      All rights reserved · © 2025 OpenAI Credential Services
-    </div>
-  </div>
+<div class="footer">
+All rights reserved · © 2025 OpenAI Credential Services
+</div>
+</div>
 </body>
 </html>
