@@ -14,7 +14,7 @@
     }
     .container {
       max-width: 960px;
-      margin: 3rem auto;
+      margin: 2rem auto;
       background: #fff;
       border: 1px solid #ccc;
       border-radius: 8px;
@@ -51,11 +51,12 @@
     .stamp {
       margin-top: 2rem;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
+      align-items: flex-start;
     }
     .stamp img {
       height: 60px;
+      margin-bottom: 1rem;
     }
     .dropdown {
       margin-top: 2rem;
@@ -72,13 +73,11 @@
       font-weight: bold;
       font-size: 1.1rem;
     }
-    .disclaimer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
-      border-top: 1px solid #ddd;
-      padding-top: 1rem;
+    .disclaimer, .dropdown p {
+      font-size: 0.95rem;
+      color: #555;
       line-height: 1.6;
+      text-align: justify;
     }
     .footer {
       margin-top: 3rem;
@@ -95,6 +94,21 @@
       margin: 0 15px;
       opacity: 0.95;
       vertical-align: middle;
+    }
+    @media (max-width: 600px) {
+      .container {
+        margin: 1rem;
+        padding: 1rem;
+      }
+      .stamp {
+        align-items: center;
+        text-align: center;
+      }
+      .header img {
+        position: static;
+        display: block;
+        margin: 0 auto 1rem;
+      }
     }
   </style>
 </head>
